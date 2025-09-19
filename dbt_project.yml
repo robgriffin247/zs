@@ -1,0 +1,37 @@
+name: 'dbt_zs'
+version: '1.0.0'
+
+profile: 'dbt_zs'
+
+model-paths: ["dbt_zs/models"]
+#analysis-paths: ["dbt_zs/analyses"]
+#test-paths: ["dbt_zs/tests"]
+#seed-paths: ["dbt_zs/seeds"]
+macro-paths: ["dbt_zs/macros"]
+#snapshot-paths: ["dbt_zs/snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+
+models:
+  dbt_zs:
+    staging:
+      +database: analytics
+      +schema: staging
+      +materialized: table
+      +docs:
+        show: true
+    intermediate:
+      +database: analytics
+      +schema: intermediate
+      +materialized: table
+      +docs:
+        show: false
+    core:
+      +database: analytics
+      +schema: core
+      +materialized: table
+      +docs:
+        show: true

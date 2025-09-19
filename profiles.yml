@@ -1,0 +1,10 @@
+dbt_zs:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: data/analytics.duckdb
+      schema: staging
+      attach:
+        - path: data/raw.duckdb
+          alias: rawdb

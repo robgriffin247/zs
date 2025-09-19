@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: zwiftracing
+    database: rawdb
+    tables:
+      - name: riders
