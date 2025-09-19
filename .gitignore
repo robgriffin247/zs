@@ -1,0 +1,16 @@
+# Secrets
+.env
+**/secrets.toml
+ 
+# Compiled files
+*.pyc
+ 
+# Data
+*.duckdb
+ 
+# dbt
+logs/
+target/
+.user.yml
+
+temp.py

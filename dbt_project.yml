@@ -1,0 +1,37 @@
+name: 'zwift_scout_dbt_pipeline'
+version: '1.0.0'
+
+profile: 'zwift_scout_dbt_pipeline'
+
+model-paths: ["zwift_scout_dbt_pipeline/models"]
+#analysis-paths: ["zwift_scout_dbt_pipeline/analyses"]
+#test-paths: ["zwift_scout_dbt_pipeline/tests"]
+#seed-paths: ["zwift_scout_dbt_pipeline/seeds"]
+macro-paths: ["zwift_scout_dbt_pipeline/macros"]
+#snapshot-paths: ["zwift_scout_dbt_pipeline/snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+
+models:
+  zwift_scout_dbt_pipeline:
+    staging:
+      +database: analytics
+      +schema: staging
+      +materialized: table
+      +docs:
+        show: false
+    intermediate:
+      +database: analytics
+      +schema: intermediate
+      +materialized: table
+      +docs:
+        show: false
+    core:
+      +database: analytics
+      +schema: core
+      +materialized: table
+      +docs:
+        show: true
