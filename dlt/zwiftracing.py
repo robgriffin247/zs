@@ -2,7 +2,7 @@ import os
 import dlt
 import httpx
 import json
-import time
+import streamlit as st
 
 def load(resource, id):
 
@@ -59,7 +59,8 @@ def load(resource, id):
         else:
             raise TypeError("Invalid input; expected an integer.")
 
-    header = {"Authorization": os.getenv("ZRAPP_KEY")}
+    # header = {"Authorization": os.getenv("ZRAPP_KEY")}
+    header = {"Authorization": st.secrets["ZRAPP_KEY"]}
     base_url = f"https://zwift-ranking.herokuapp.com/public/{resource}"
 
     @dlt.resource(
@@ -93,8 +94,8 @@ def load(resource, id):
 
 
 if __name__ == "__main__":
-    #print(load("rider", 4598636))
+    print(load("rider", 4598636))
     #print(load("rider", 5574))
     #print(load("riders", [4598636, 5574, 5879996, 7252254, 5639087, 5913482, 685362, 6120611, 1240469]))
     #[12764, 161, 20650, 2707, 2740]
-    print(load("club", 2740))
+    #print(load("club", 2740))
