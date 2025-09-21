@@ -3,7 +3,19 @@ with source as (
 ),
 
 most_recent_load as (
-    select * from source
+    select 
+        rider_id, 
+        max(_dlt_load_id) as _dlt_load_id,
+        true as most_recent
+    from source
+    group by rider_id
+),
+
+filter_to_recent as (
+    select
+        source.*
+    from source left join most_recent_load using(rider_id, _dlt_load_id)
+    where most_recent=true
 ),
 
 column_selection as (
@@ -80,7 +92,7 @@ column_selection as (
         race__max30__womens__number::int as velo_max_30_womens_number,
         race__max90__womens__category::varchar as velo_max_90_womens_category,
         race__max90__womens__number::int as velo_max_90_womens_number,
-    from most_recent_load
+    from filter_to_recent
 )
 
 select * from column_selection
