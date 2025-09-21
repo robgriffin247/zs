@@ -2,6 +2,7 @@ import os
 import dlt
 import httpx
 import json
+import time
 
 def load(resource, id):
 
@@ -94,5 +95,6 @@ def load(resource, id):
 if __name__ == "__main__":
     #print(load("rider", 4598636))
     #print(load("rider", 5574))
-    print(load("riders", [4598636, 5574, 5879996, 7252254, 5639087, 5913482, 685362, 6120611, 1240469]))
-    print(load("club", 2707))
+    #print(load("riders", [4598636, 5574, 5879996, 7252254, 5639087, 5913482, 685362, 6120611, 1240469]))
+    #[12764, 161, 20650, 2707, 10]
+    print(load("club", 10))

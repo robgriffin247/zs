@@ -1,8 +1,10 @@
 version: 2
 
-sources:
-  - name: raw
-    schema: zwiftracing
-    database: rawdb
-    tables:
-      - name: riders
+models:
+  - name: stg__riders
+    description: Staging of riders data; setting data types and column names.
+    columns:
+      - name: id
+        description: Rider ID number as used by Zwift.
+        tests: 
+          - not_null
