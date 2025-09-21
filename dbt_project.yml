@@ -22,7 +22,7 @@ models:
       +schema: staging
       +materialized: table
       +docs:
-        show: true
+        show: false
     intermediate:
       +database: analytics
       +schema: intermediate

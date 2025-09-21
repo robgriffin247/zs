@@ -43,7 +43,7 @@ column_selection as (
         power__w120::float as watts_120,
         power__w300::float as watts_300,
         power__w1200::float as watts_1200,
-        power__cp::float as cp,
+        power__cp::float as watts_critical_power,
         coalesce(power__awc, power__awc__v_double)::float as work_capacity,
         power__compound_score::float as compound_score,
         power__power_rating::float as power_rating,

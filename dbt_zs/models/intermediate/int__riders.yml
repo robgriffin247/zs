@@ -1,0 +1,91 @@
+version: 2
+
+models:
+  - name: int__riders
+    description: Summary of riders data with key performance and race metrics.
+    columns:
+      - name: id
+        description: ID number of the rider, as used by zwift.
+        tests:
+          - not_null
+          - unique
+      - name: rider
+        description: Name of the rider.
+      - name: club_id
+        description: ID number of the club, as used by Zwift.
+      - name: club
+        description: Club name.
+      - name: weight
+        description: Rider weight in kilograms.
+      - name: zwift_category
+        description: Zwift racing category.
+      - name: velo_current
+        description: Current vELO score.
+      - name: velo_current_category
+        description: Current vELO category-
+      - name: velo_max_90
+        description: 90-day peak vELO score.
+      - name: velo_max_90_category
+        description: 90-day peak vELO category.
+      - name: race_starts
+        description: Count of race starts in last 90 days.
+      - name: race__finishes
+        description: Count of race finishes in last 90 days.
+      - name: race_wins
+        description: Count of race wins in last 90 days.
+      - name: race_podiums
+        description: Count of top 3 placings in last 90 days.
+      - name: wkg_5
+        description: 90-day peak 5-second Watt/kg.
+      - name: wkg_15
+        description: 90-day peak 15-second Watt/kg.
+      - name: wkg_30
+        description: 90-day peak 30-second Watt/kg.
+      - name: wkg_60
+        description: 90-day peak 1-minute Watt/kg.
+      - name: wkg_120
+        description: 90-day peak 2-minute Watt/kg.
+      - name: wkg_300
+        description: 90-day peak 5-minute Watt/kg.
+      - name: wkg_1200
+        description: 90-day peak 20-minute Watt/kg.
+      - name: wkg_ftp
+        description: Zwift-estimated Functional Threshold Power in Watts/kg.
+      - name: watts_5
+        description: 90-day peak 5-second Watts.
+      - name: watts_15
+        description: 90-day peak 15-second Watts.
+      - name: watts_30
+        description: 90-day peak 30-second Watts.
+      - name: watts_60
+        description: 90-day peak 1-minute Watts.
+      - name: watts_120
+        description: 90-day peak 2-minute Watts.
+      - name: watts_300
+        description: 90-day peak 5-minute Watts.
+      - name: watts_1200
+        description: 90-day peak 20-minute Watts.
+      - name: watts_ftp
+        description: Zwift-estimated Functional Threshold Power.
+      - name: handicap_flat
+        description: ZwiftRacing handicap score; flat races.
+      - name: handicap_rolling
+        description: ZwiftRacing handicap score; rolling races.
+      - name: handicap_hilly
+        description: ZwiftRacing handicap score; hilly races.
+      - name: handicap_mountainous
+        description: ZwiftRacing handicap score; mountainous races.
+      - name: phenotype_sprinter
+        description: Population percentile for sprinting phenotype.
+      - name: phenotype_puncheur
+        description: Population percentile for puncheur phenotype.
+      - name: phenotype_pursuiter
+        description: Population percentile for pursuiter phenotype.
+      - name: phenotype_climber
+        description: Population percentile for climber phenotype.
+      - name: phenotype_timetrialist
+        description: Population percentile for timetrialist phenotype.
+      - name: dlt_load_datetime
+        description: Date-time of loading from ZwiftRacing.app API to database.
+      - name: dlt_load_epoch
+        description: Epoch timestamp of loading from ZwiftRacing.app API to database.

@@ -9,6 +9,7 @@ add_columns as (
         *,        
         watts_ftp/weight as wkg_ftp,
         race_dnfs + race__finishes as race_starts,
+        strftime(to_timestamp(dlt_load_epoch), '%Y-%m-%d %H:%M:%S') as dlt_load_datetime,
     from source
 ),
 
@@ -45,14 +46,15 @@ column_selection as (
         watts_1200,
         watts_ftp,
         handicap_flat,
-        handicap_hilly,
         handicap_rolling,
+        handicap_hilly,
         handicap_mountainous,
         phenotype_sprinter,
         phenotype_puncheur,
         phenotype_pursuiter,
         phenotype_climber,
         phenotype_timetrialist,
+        dlt_load_datetime,
         dlt_load_epoch,
     from add_columns
 )
