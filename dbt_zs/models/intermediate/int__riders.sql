@@ -8,7 +8,7 @@ add_columns as (
     select 
         *,        
         watts_ftp/weight as wkg_ftp,
-        race_dnfs + race__finishes as race_starts,
+        race_dnfs + race_finishes as race_starts,
         strftime(to_timestamp(dlt_load_epoch), '%Y-%m-%d %H:%M:%S') as dlt_load_datetime,
     from source
 ),
@@ -26,7 +26,7 @@ column_selection as (
         velo_max_90,
         velo_max_90_category,
         race_starts,
-        race__finishes,
+        race_finishes,
         race_wins,
         race_podiums,
         wkg_5,

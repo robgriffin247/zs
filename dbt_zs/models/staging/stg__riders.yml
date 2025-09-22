@@ -5,78 +5,149 @@ models:
     description: Staging of riders data; setting data types and column names.
     columns:
       - name: id
-        description: Rider ID number as used by Zwift.
+        description: '{{ doc("description_rider_id") }}'
         tests: 
           - not_null
           - unique
       - name: rider
+        description: '{{ doc("description_rider") }}'
       - name: gender
+        description: '{{ doc("description_gender") }}'
       - name: country_code
+        description: '{{ doc("description_country_code") }}'
       - name: age_category
+        description: '{{ doc("description_age_category") }}'
       - name: height
+        description: '{{ doc("description_height") }}'
       - name: weight
+        description: '{{ doc("description_weight") }}'
       - name: zwift_category
+        description: '{{ doc("description_zwift_category") }}'
       - name: watts_ftp
+        description: '{{ doc("description_watts_ftp") }}'
       - name: wkg_5
+        description: '{{ doc("description_wkg_5") }}'
       - name: wkg_15
+        description: '{{ doc("description_wkg_15") }}'
       - name: wkg_30
+        description: '{{ doc("description_wkg_30") }}'
       - name: wkg_60
+        description: '{{ doc("description_wkg_60") }}'
       - name: wkg_120
+        description: '{{ doc("description_wkg_120") }}'
       - name: wkg_300
+        description: '{{ doc("description_wkg_300") }}'
       - name: wkg_1200
+        description: '{{ doc("description_wkg_1200") }}'
       - name: watts_5
+        description: '{{ doc("description_watts_5") }}'
       - name: watts_15
+        description: '{{ doc("description_watts_15") }}'
       - name: watts_30
+        description: '{{ doc("description_watts_30") }}'
       - name: watts_60
+        description: '{{ doc("description_watts_60") }}'
       - name: watts_120
+        description: '{{ doc("description_watts_120") }}'
       - name: watts_300
+        description: '{{ doc("description_watts_300") }}'
       - name: watts_1200
+        description: '{{ doc("description_watts_1200") }}'
       - name: watts_critical_power
+        description: '{{ doc("description_watts_critical_power") }}'
       - name: work_capacity
+        description: '{{ doc("description_work_capacity") }}'
       - name: compound_score
+        description: '{{ doc("description_compound_score") }}'
       - name: power_rating
+        description: '{{ doc("description_power_rating") }}'
       - name: velo_last
+        description: '{{ doc("description_velo_last") }}'
       - name: velo_last_epoch
+        description: '{{ doc("description_velo_last_epoch") }}'
       - name: velo_last_mixed_category
+        description: '{{ doc("description_velo_last_mixed_category") }}'
       - name: velo_last_mixed_category_number
+        description: '{{ doc("description_velo_last_mixed_category_number") }}'
       - name: velo_current
+        description: '{{ doc("description_velo_current") }}'
       - name: velo_current_epoch
+        description: '{{ doc("description_velo_current_epoch") }}'
       - name: velo_current_category
+        description: '{{ doc("description_velo_current_category") }}'
       - name: velo_current_category_number
+        description: '{{ doc("description_velo_current_category_number") }}'
       - name: velo_max_30
+        description: '{{ doc("description_velo_max_30") }}'
       - name: velo_max_30_epoch
+        description: '{{ doc("description_velo_max_30_epoch") }}'
       - name: velo_max_30_expires_epoch
+        description: '{{ doc("description_velo_max_30_expires_epoch") }}'
       - name: velo_max_30_category
+        description: '{{ doc("description_velo_max_30_category") }}'
       - name: velo_max_30_category_number
+        description: '{{ doc("description_velo_max_30_category_number") }}'
       - name: velo_max_90
+        description: '{{ doc("description_velo_max_90") }}'
       - name: velo_max_90_epoch
+        description: '{{ doc("description_velo_max_90_epoch") }}'
       - name: velo_max_90_expires_epoch
+        description: '{{ doc("description_velo_max_90_expires_epoch") }}'
       - name: velo_max_90_category
+        description: '{{ doc("description_velo_max_90_category") }}'
       - name: velo_max_90_category_number
-      - name: race__finishes
+        description: '{{ doc("description_velo_max_90_category_number") }}'
+      - name: race_finishes
+        description: '{{ doc("description_race_finishes") }}'
       - name: race_dnfs
+        description: '{{ doc("description_race_dnfs") }}'
       - name: race_wins
+        description: '{{ doc("description_race_wins") }}'
       - name: race_podiums
+        description: '{{ doc("description_race_podiums") }}'
       - name: handicap_flat
+        description: '{{ doc("description_handicap_flat") }}'
       - name: handicap_rolling
+        description: '{{ doc("description_handicap_rolling") }}'
       - name: handicap_hilly
+        description: '{{ doc("description_handicap_hilly") }}'
       - name: handicap_mountainous
+        description: '{{ doc("description_handicap_mountainous") }}'
       - name: phenotype_sprinter
+        description: '{{ doc("description_phenotype_sprinter") }}'
       - name: phenotype_puncheur
+        description: '{{ doc("description_phenotype_puncheur") }}'
       - name: phenotype_pursuiter
+        description: '{{ doc("description_phenotype_pursuiter") }}'
       - name: phenotype_climber
+        description: '{{ doc("description_phenotype_climber") }}'
       - name: phenotype_timetrialist
+        description: '{{ doc("description_phenotype_timetrialist") }}'
       - name: phenotype
+        description: '{{ doc("description_phenotype") }}'
       - name: phenotype_bias
+        description: '{{ doc("description_phenotype_bias") }}'
       - name: club_id
+        description: '{{ doc("description_club_id") }}'
       - name: club
+        description: '{{ doc("description_club") }}'
       - name: dlt_load_epoch
+        description: '{{ doc("description_dlt_load_epoch") }}'
       - name: dlt_load
+        description: '{{ doc("description_dlt_load") }}'
       - name: velo_last_womens_category
+        description: '{{ doc("description_velo_last_womens_category") }}'
       - name: velo_last_womens_number
+        description: '{{ doc("description_velo_last_womens_number") }}'
       - name: velo_current_womens_category
+        description: '{{ doc("description_velo_current_womens_category") }}'
       - name: velo_current_womens_number
+        description: '{{ doc("description_velo_current_womens_number") }}'
       - name: velo_max_30_womens_category
+        description: '{{ doc("description_velo_max_30_womens_category") }}'
       - name: velo_max_30_womens_number
+        description: '{{ doc("description_velo_max_30_womens_number") }}'
       - name: velo_max_90_womens_category
+        description: '{{ doc("description_velo_max_90_womens_category") }}'
       - name: velo_max_90_womens_number
+        description: '{{ doc("description_velo_max_90_womens_number") }}'

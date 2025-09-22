@@ -65,7 +65,7 @@ column_selection as (
         race__max90__expires::int as velo_max_90_expires_epoch,
         race__max90__mixed__category::varchar as velo_max_90_category,
         race__max90__mixed__number::int as velo_max_90_category_number,
-        race__finishes::int as race__finishes,
+        race__finishes::int as race_finishes,
         race__dnfs::int as race_dnfs,
         race__wins::int as race_wins,
         race__podiums::int as race_podiums,

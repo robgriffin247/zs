@@ -1,0 +1,5 @@
+groups:
+  - name: ZwiftScout
+    owner:
+      name: Rob Griffin
+    description: Production-ready data used in the ZwiftScout app.
