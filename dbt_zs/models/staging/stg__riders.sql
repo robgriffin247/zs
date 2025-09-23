@@ -85,13 +85,13 @@ column_selection as (
         _dlt_load_id::float as dlt_load_epoch,
         _dlt_id::varchar as dlt_load,
         race__last__womens__category::varchar as velo_last_womens_category,
-        race__last__womens__number::int as velo_last_womens_number,
+        race__last__womens__number::int as velo_last_womens_category_number,
         race__current__womens__category::varchar as velo_current_womens_category,
-        race__current__womens__number::int as velo_current_womens_number,
+        race__current__womens__number::int as velo_current_womens_category_number,
         race__max30__womens__category::varchar as velo_max_30_womens_category,
-        race__max30__womens__number::int as velo_max_30_womens_number,
+        race__max30__womens__number::int as velo_max_30_womens_category_number,
         race__max90__womens__category::varchar as velo_max_90_womens_category,
-        race__max90__womens__number::int as velo_max_90_womens_number,
+        race__max90__womens__number::int as velo_max_90_womens_category_number,
     from filter_to_recent
 )
 

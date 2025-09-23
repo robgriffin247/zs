@@ -137,17 +137,17 @@ models:
         description: '{{ doc("description_dlt_load") }}'
       - name: velo_last_womens_category
         description: '{{ doc("description_velo_last_womens_category") }}'
-      - name: velo_last_womens_number
-        description: '{{ doc("description_velo_last_womens_number") }}'
+      - name: velo_last_womens_category_number
+        description: '{{ doc("description_velo_last_womens_category_number") }}'
       - name: velo_current_womens_category
         description: '{{ doc("description_velo_current_womens_category") }}'
-      - name: velo_current_womens_number
-        description: '{{ doc("description_velo_current_womens_number") }}'
+      - name: velo_current_womens_category_number
+        description: '{{ doc("description_velo_current_womens_category_number") }}'
       - name: velo_max_30_womens_category
         description: '{{ doc("description_velo_max_30_womens_category") }}'
-      - name: velo_max_30_womens_number
-        description: '{{ doc("description_velo_max_30_womens_number") }}'
+      - name: velo_max_30_womens_category_number
+        description: '{{ doc("description_velo_max_30_womens_category_number") }}'
       - name: velo_max_90_womens_category
         description: '{{ doc("description_velo_max_90_womens_category") }}'
-      - name: velo_max_90_womens_number
-        description: '{{ doc("description_velo_max_90_womens_number") }}'
+      - name: velo_max_90_womens_category_number
+        description: '{{ doc("description_velo_max_90_womens_category_number") }}'
