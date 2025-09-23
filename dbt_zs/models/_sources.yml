@@ -6,5 +6,5 @@ sources:
     database: rawdb
     tables:
       - name: riders
-        docs:
+        +docs:
           show: false

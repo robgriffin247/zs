@@ -6,4 +6,9 @@
 
 Welcome to the ZwiftScout documentation. This portal details the data model underlying the ZwiftScout platform.
 
+
+#### Data Sources
+
+Data comes from the ZwiftRacing.app API.
+
 {% enddocs %}
