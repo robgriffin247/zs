@@ -49,6 +49,7 @@ column_selection as (
         handicap_rolling,
         handicap_hilly,
         handicap_mountainous,
+        phenotype,
         phenotype_sprinter,
         phenotype_puncheur,
         phenotype_pursuiter,

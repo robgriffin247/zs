@@ -4,6 +4,10 @@ models:
   - name: obt__riders
     description: Summary of riders data with key performance and race metrics.
     group: ZwiftScout
+    tests:
+     - is_false:
+         config:
+           severity: warn
     config:
       tags: ["Core", "ZwiftRacing"]
     columns:
@@ -78,6 +82,8 @@ models:
         description: '{{ doc("description_handicap_hilly") }}'
       - name: handicap_mountainous
         description: '{{ doc("description_handicap_mountainous") }}'
+      - name: phenotype
+        description: '{{ doc("description_phenotype") }}'
       - name: phenotype_sprinter
         description: '{{ doc("description_phenotype_sprinter") }}'
       - name: phenotype_puncheur
