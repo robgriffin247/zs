@@ -11,4 +11,8 @@ Welcome to the ZwiftScout documentation. This portal details the data model unde
 
 Data comes from the ZwiftRacing.app API.
 
+#### Further Reading
+
+[Here you can read more details](#!/overview/ZwiftScout)
+
 {% enddocs %}
