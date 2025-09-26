@@ -6,7 +6,7 @@ profile: 'dbt_zs'
 model-paths: ["dbt_zs/models"]
 macro-paths: ["dbt_zs/macros"]
 #analysis-paths: ["dbt_zs/analyses"]
-#test-paths: ["dbt_zs/tests"]
+test-paths: ["dbt_zs/tests"]
 #seed-paths: ["dbt_zs/seeds"]
 #snapshot-paths: ["dbt_zs/snapshots"]
 
