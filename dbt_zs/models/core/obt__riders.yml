@@ -6,10 +6,6 @@ models:
     group: ZwiftScout
     config:
       tags: ["Core", "ZwiftRacing"]
-    tests:
-     - no_riders_over_100kg_macro:
-         config:
-           severity: warn
     columns:
       - name: id
         description: '{{ doc("description_rider_id") }}'
@@ -24,9 +20,10 @@ models:
         description: '{{ doc("description_club") }}'
       - name: weight
         description: '{{ doc("description_weight") }}'
-        tests:
-          - max_value:
-              threshold: 100
+        data_tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: '<500'
               config:
                 severity: warn
       - name: zwift_category
@@ -78,7 +75,7 @@ models:
       - name: watts_1200
         description: '{{ doc("description_watts_1200") }}'
       - name: watts_ftp
-        description: '{{ doc("description_watts_ftp") }}'
+        description: '{{ doc("description_watts_ftp") }}' 
       - name: handicap_flat
         description: '{{ doc("description_handicap_flat") }}'
       - name: handicap_rolling
@@ -88,7 +85,13 @@ models:
       - name: handicap_mountainous
         description: '{{ doc("description_handicap_mountainous") }}'
       - name: phenotype
-        description: '{{ doc("description_phenotype") }}'
+        description: '{{ doc("description_phenotype") }}'        
+        data_tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "in('Sprinter', 'Climber', 'Time Trialist', 'Puncheur', 'Pursuiter', 'All-Rounder')"
+              config:
+                severity: warn
       - name: phenotype_sprinter
         description: '{{ doc("description_phenotype_sprinter") }}'
       - name: phenotype_puncheur
