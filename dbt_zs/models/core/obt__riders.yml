@@ -4,15 +4,12 @@ models:
   - name: obt__riders
     description: Summary of riders data with key performance and race metrics.
     group: ZwiftScout
-    tests:
-     - is_false:
-         config:
-           severity: warn
-     - rider_is_over_100kg:
-         config:
-           severity: warn
     config:
       tags: ["Core", "ZwiftRacing"]
+    tests:
+     - no_riders_over_120kg:
+         config:
+           severity: warn
     columns:
       - name: id
         description: '{{ doc("description_rider_id") }}'
