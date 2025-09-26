@@ -7,7 +7,7 @@ models:
     config:
       tags: ["Core", "ZwiftRacing"]
     tests:
-     - no_riders_over_120kg:
+     - no_riders_over_100kg_macro:
          config:
            severity: warn
     columns:
@@ -24,6 +24,11 @@ models:
         description: '{{ doc("description_club") }}'
       - name: weight
         description: '{{ doc("description_weight") }}'
+        tests:
+          - max_value:
+              threshold: 100
+              config:
+                severity: warn
       - name: zwift_category
         description: '{{ doc("description_zwift_category") }}'
       - name: velo_current
