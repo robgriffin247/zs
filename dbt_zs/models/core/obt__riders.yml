@@ -8,6 +8,9 @@ models:
      - is_false:
          config:
            severity: warn
+     - rider_is_over_100kg:
+         config:
+           severity: warn
     config:
       tags: ["Core", "ZwiftRacing"]
     columns:
