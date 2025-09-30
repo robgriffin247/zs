@@ -1,4 +1,4 @@
-dbt_zs:
+analytics:
   target: dev
   outputs:
     dev:

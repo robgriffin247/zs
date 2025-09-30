@@ -1,14 +1,14 @@
-name: 'dbt_zs'
+name: 'analytics'
 version: '1.0.0'
 
-profile: 'dbt_zs'
+profile: 'analytics'
 
-model-paths: ["dbt_zs/models"]
-macro-paths: ["dbt_zs/macros"]
-#analysis-paths: ["dbt_zs/analyses"]
-#test-paths: ["dbt_zs/tests"]
-#seed-paths: ["dbt_zs/seeds"]
-#snapshot-paths: ["dbt_zs/snapshots"]
+model-paths: ["analytics/models"]
+macro-paths: ["analytics/macros"]
+#analysis-paths: ["analytics/analyses"]
+#test-paths: ["analytics/tests"]
+#seed-paths: ["analytics/seeds"]
+#snapshot-paths: ["analytics/snapshots"]
 
 clean-targets:
   - "target"
@@ -16,7 +16,7 @@ clean-targets:
 
 
 models:
-  dbt_zs:
+  analytics:
     staging:
       +database: analytics
       +schema: staging
