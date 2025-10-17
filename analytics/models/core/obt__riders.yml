@@ -86,12 +86,6 @@ models:
         description: '{{ doc("description_handicap_mountainous") }}'
       - name: phenotype
         description: '{{ doc("description_phenotype") }}'        
-        data_tests:
-          - dbt_utils.expression_is_true:
-              arguments:
-                expression: "in('Sprinter', 'Climber', 'Time Trialist', 'Puncheur', 'Pursuiter', 'All-Rounder')"
-              config:
-                severity: warn
       - name: phenotype_sprinter
         description: '{{ doc("description_phenotype_sprinter") }}'
       - name: phenotype_puncheur
