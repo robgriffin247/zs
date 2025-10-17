@@ -81,6 +81,9 @@ def load(resource, id):
 
         yield from data
 
+    if not os.path.exists("data"):
+        os.mkdir("data")
+
     pipeline = dlt.pipeline(
         pipeline_name="raw",
         destination=dlt.destinations.duckdb("data/raw.duckdb"),
@@ -94,8 +97,8 @@ def load(resource, id):
 
 
 if __name__ == "__main__":
-    #print(load("rider", 4598636))
-    print(load("rider", 5574))
+    print(load("rider", 4598636))
+    #print(load("rider", 5574))
     #print(load("riders", [4598636, 5574, 5879996, 7252254, 5639087, 5913482, 685362, 6120611, 1240469]))
     #[12764, 161, 20650, 2707, 2740]
     #print(load("club", 2740))
